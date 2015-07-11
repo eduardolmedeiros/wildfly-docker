@@ -18,9 +18,7 @@ docker run -it -p 8080:8080 -p 9990:9990 emedeiros/wildfly /opt/wildfly-9.0.0.Fi
 3. Console access:
 ==================
 
-Url: ``http://your.ip:9990``
-User: ``admin``
-Password: ``wildfly``
+Detail to acess web-console:
 
 Name  | Description
 ------------- | -------------
