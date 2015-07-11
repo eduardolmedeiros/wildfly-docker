@@ -21,3 +21,9 @@ docker run -it -p 8080:8080 -p 9990:9990 emedeiros/wildfly /opt/wildfly-9.0.0.Fi
 Url: ``http://your.ip:9990``
 User: ``admin``
 Password: ``wildfly``
+
+Name  | Description
+------------- | -------------
+URL  | http://your.ip:9990
+User  | admin
+Password | wildfly

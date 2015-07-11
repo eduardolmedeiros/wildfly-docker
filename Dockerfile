@@ -17,8 +17,7 @@ RUN adduser -g wildfly wildfly
 RUN yum install java-1.8.0-openjdk-devel -y
 
 # Download and install WildFly
-RUN cd $HOME
-RUN curl -O http://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz 
+RUN cd $HOME && curl -O http://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz 
 RUN tar xzvf wildfly-$WILDFLY_VERSION -C /opt
 RUN ln -s /opt/wildfly-$WILDFLY_VERSION /opt/wildfly
 RUN chown -R wildfly:wildfly /opt/wildfly-$WILDFLY_VERSION 
