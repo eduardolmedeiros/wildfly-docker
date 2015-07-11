@@ -18,7 +18,7 @@ docker run -it -p 8080:8080 -p 9990:9990 emedeiros/wildfly /opt/wildfly-9.0.0.Fi
 3. Console access:
 ==================
 
-Detail to acess web-console:
+Details to acess web-console:
 
 Name  | Description
 ------------- | -------------
