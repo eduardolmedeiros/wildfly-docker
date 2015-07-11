@@ -26,7 +26,7 @@ server-three (off) | 8330
 3. Console access:
 ==================
 
-Details to acess web-console:
+Details to access web-console:
 
 Name  | Description
 ------------- | -------------
