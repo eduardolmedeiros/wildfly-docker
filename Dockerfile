@@ -25,7 +25,7 @@ RUN chown -R wildfly:wildfly /opt/wildfly-$WILDFLY_VERSION
 
 # Add user admin / pass: wildfly
 USER wildfly
-RUN /opt/wildfly/bin/add-user.sh admin admin --silent
+RUN /opt/wildfly/bin/add-user.sh admin wildfly --silent
 
 # Deploy
 USER wildfly
