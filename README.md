@@ -12,8 +12,16 @@ docker run -it -p 8080:8080 -p 9990:9990 emedeiros/wildfly
 ==========================
 
 ```sh
-docker run -it -p 8080:8080 -p 9990:9990 emedeiros/wildfly /opt/wildfly-9.0.0.Final/bin/domain.sh -b 0.0.0.0 -bmanagement 0.0.0.0
+docker run -it -p 8080:8080 -p 8230:8230 -p 8330:8330 -p 9990:9990 emedeiros/wildfly /opt/wildfly-9.0.0.Final/bin/domain.sh -b 0.0.0.0 -bmanagement 0.0.0.0
 ```
+
+Details about servers instances:
+
+Server | Port
+------------- | -------------
+server-one  | 8080
+server-two  | 8230
+server-three | 8330
 
 3. Console access:
 ==================
