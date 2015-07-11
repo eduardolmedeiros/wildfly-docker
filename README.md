@@ -5,8 +5,7 @@ WildFly 9.0.0.Final with OpenJDK 1.8
 ==========================
 
 ```sh
-docker run -it -p 8080:8080 -p 9990:9990 emedeiros/wildfly /opt/wildfly-9.0.0.Final/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
-```
+docker run -it -p 8080:8080 -p 9990:9990 emedeiros/wildfly
 
 2. To boot in domain mode:
 ==========================
