@@ -21,7 +21,7 @@ Server | Port
 ------------- | -------------
 server-one  | 8080
 server-two  | 8230
-server-three | 8330
+server-three (off) | 8330
 
 3. Console access:
 ==================
