@@ -13,7 +13,7 @@ ENV WILDFLY_VERSION 9.0.0.Final
 RUN groupadd wildfly
 RUN adduser -g wildfly wildfly
 
-# Install JDK 1.8
+# Install JDK 8
 RUN yum install java-1.8.0-openjdk-devel -y
 
 # Download and install WildFly

@@ -1,4 +1,4 @@
-WildFly 9.0.0.Final with OpenJDK 1.8
+WildFly 9.0.0.Final with OpenJDK 8
 ====================================
 
 1. To boot in standalone mode:
