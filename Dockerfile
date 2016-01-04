@@ -7,7 +7,7 @@ EXPOSE 8080
 EXPOSE 9990
 
 # Set the WILDFLY_VERSION env variable
-ENV WILDFLY_VERSION 9.0.1.Final
+ENV WILDFLY_VERSION 9.0.2.Final
 
 # Add user and group wildfly
 RUN groupadd wildfly
