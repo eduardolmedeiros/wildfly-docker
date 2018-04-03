@@ -1,4 +1,4 @@
-WildFly 11 with OpenJDK 8
+WildFly 12 with OpenJDK 8
 ====================================
 
 1. To boot in standalone mode:
