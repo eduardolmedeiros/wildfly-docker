@@ -15,7 +15,7 @@ docker run -it -p 8080:8080 -p 8230:8230 -p 8330:8330 -p 9990:9990 emedeiros/wil
 ### Details about servers instances:
 
 ```
-Server | Port
+Server             | Port
 -------------------| --------
 server-one         | 8080
 server-two         | 8230
@@ -27,7 +27,7 @@ server-three (off) | 8330
 Details to access web-console:
 
 ```
-Name  | Description
+Name          | Description
 ------------- | -------------
 URL           | http://your.ip:9990/console
 User          | admin
