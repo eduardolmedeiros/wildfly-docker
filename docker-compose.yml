@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  wldfly:
+    image: emedeiros/wildfly
+    ports:
+      - 8080:8080
+      - 9990:9990
