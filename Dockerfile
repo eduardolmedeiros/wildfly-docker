@@ -1,26 +1,29 @@
-FROM centos
-
-MAINTAINER <contato@eduardomedeiros.me>
+FROM centos:7
+LABEL maintainer=eduardo@dotmac.com.br
 
 # Expose the ports
 EXPOSE 8080
 EXPOSE 9990
 
 # Set the WILDFLY_VERSION env variable
-ENV WILDFLY_VERSION 18.0.0.Final
+ENV WILDFLY_VERSION 18.0.1.Final
 
 # Add user and group wildfly
-RUN groupadd wildfly
-RUN adduser -g wildfly wildfly
+RUN groupadd wildfly && \
+    adduser -g wildfly wildfly
 
 # Install JDK 8
-RUN yum install java-1.8.0-openjdk-devel -y
+ENV JAVA_VERSION 1.8.0
+
+RUN yum install java-$JAVA_VERSION -y && \
+    yum clean all
 
 # Download and install WildFly
-RUN curl -O https://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz
-RUN tar xzvf wildfly-$WILDFLY_VERSION.tar.gz -C /opt
-RUN ln -s /opt/wildfly-$WILDFLY_VERSION /opt/wildfly
-RUN chown -R wildfly:wildfly /opt/wildfly-$WILDFLY_VERSION
+RUN curl -O https://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz && \
+    tar xzvf wildfly-$WILDFLY_VERSION.tar.gz -C /opt && \
+    ln -s /opt/wildfly-$WILDFLY_VERSION /opt/wildfly && \
+    chown -R wildfly:wildfly /opt/wildfly-$WILDFLY_VERSION && \
+    rm wildfly-$WILDFLY_VERSION.tar.gz
 
 # Add user admin / pass: wildfly
 USER wildfly
