@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:8
 LABEL maintainer=eduardo@dotmac.com.br
 
 # Expose the ports
@@ -6,16 +6,16 @@ EXPOSE 8080
 EXPOSE 9990
 
 # Set the WILDFLY_VERSION env variable
-ENV WILDFLY_VERSION 21.0.1.Final
+ENV WILDFLY_VERSION 22.0.1.Final
 
 # Add user and group wildfly
 RUN groupadd wildfly && \
     adduser -g wildfly wildfly
 
-# Install JDK 8
-ENV JAVA_VERSION 1.8.0
+# Install JDK 11
+ENV JAVA_VERSION 11
 
-RUN yum install java-$JAVA_VERSION -y && \
+RUN yum install java-$JAVA_VERSION-openjdk -y && \
     yum clean all
 
 # Download and install WildFly
