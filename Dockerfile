@@ -6,7 +6,7 @@ EXPOSE 8080
 EXPOSE 9990
 
 # Set the WILDFLY_VERSION env variable
-ENV WILDFLY_VERSION 22.0.1.Final
+ENV WILDFLY_VERSION 25.0.0.Final
 
 # Add user and group wildfly
 RUN groupadd wildfly && \
@@ -19,7 +19,7 @@ RUN yum install java-$JAVA_VERSION-openjdk -y && \
     yum clean all
 
 # Download and install WildFly
-RUN curl -O https://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz && \
+RUN curl -L -o wildfly-$WILDFLY_VERSION.tar.gz https://github.com/wildfly/wildfly/releases/download/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz && \
     tar xzvf wildfly-$WILDFLY_VERSION.tar.gz -C /opt && \
     ln -s /opt/wildfly-$WILDFLY_VERSION /opt/wildfly && \
     chown -R wildfly:wildfly /opt/wildfly-$WILDFLY_VERSION && \
