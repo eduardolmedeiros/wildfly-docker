@@ -1,5 +1,8 @@
 #  WildFly with OpenJDK 8
 
+This is a docker image with WildFly that ships a hello world java application. 
+Useful for demo and labs.
+
 ## 1. To boot in standalone mode:
 
 ```sh
