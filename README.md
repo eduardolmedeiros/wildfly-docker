@@ -1,6 +1,6 @@
-#  WildFly with OpenJDK 8
+#  WildFly with OpenJDK 11
 
-This is a docker image with WildFly (centos8 based) that ships a hello world java application. 
+This is a docker image with WildFly (AlmaLinux based) that ships a hello world java application. 
 Useful for demo and labs.
 
 ## 1. To boot in standalone mode:

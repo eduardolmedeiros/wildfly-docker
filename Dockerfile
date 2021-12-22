@@ -1,4 +1,4 @@
-FROM centos:8
+FROM almalinux:8
 LABEL maintainer=eduardo@dotmac.com.br
 
 # Expose the ports
@@ -6,7 +6,7 @@ EXPOSE 8080
 EXPOSE 9990
 
 # Set the WILDFLY_VERSION env variable
-ENV WILDFLY_VERSION 25.0.1.Final
+ENV WILDFLY_VERSION 26.0.0.Final
 
 # Add user and group wildfly
 RUN groupadd wildfly && \
